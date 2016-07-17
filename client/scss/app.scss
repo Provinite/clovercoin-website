@@ -1,0 +1,178 @@
+@charset 'utf-8';
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@include foundation-global-styles;
+@include foundation-grid; // @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms; // @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar; // @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes; // @include foundation-flex-classes;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+.top-bar {
+    padding: 0;
+}
+.top-bar .button-group {
+    margin-bottom: 0;
+}
+.icon-splash {
+    color: $primary-color;
+    margin-bottom: 1.2rem;
+}
+.column {
+    position: relative;
+}
+.separator {
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 20%, #444 50%, #ffffff 80%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 20%, #444 50%, #ffffff 80%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 20%, #444 50%, #ffffff 80%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#ffffff', endColorstr='#ffffff',GradientType=0 );
+    /* IE6-9 */
+    opacity: 0.7;
+    position: absolute;
+    height: 170px;
+    width: 1px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.logo {
+    color: #E8B61D;
+}
+.logo img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.orbit-container {
+    //hackety hack hack
+    height: auto !important;
+}
+.orbit-caption {
+    padding: 0.3rem;
+}
+
+.full-spread-menu > div {
+    cursor: pointer;
+
+    &:hover icon.icon-splash {
+        color:$purple;
+    }
+}
+
+$footer-text-color: #fff;
+// footer CSS
+.footer {
+    background-color: $primary-color;
+    padding: 2rem 4rem;
+    text-align: center;
+    color: $footer-text-color;
+    i {
+        font-size: 100px;
+    }
+}
+.footer {
+    h4 {
+        color: $footer-text-color;
+        font-size: 1em;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-top: 2.5rem;
+        margin-bottom: 10px;
+    }
+    a,
+    p {
+        font-weight: 300;
+        font-size: 0.8em;
+        color: $footer-text-color;
+    }
+}
+@media only screen and (min-width: 40.063em) {
+    .footer {
+        .columns:nth-child(n+2) {
+            border-left: 1px solid scale-color($footer-text-color, $lightness: -30%);
+            min-height: 280px;
+        }
+    }
+}
+.footer-links {
+    list-style-type: none;
+    li {
+        margin-top: 0.5em;
+    }
+    a:hover {
+        color:$purple;
+        vertical-align:middle;
+    }
+}
+
+.tos h2 i.fa {
+    color: $purple;
+    @include breakpoint(large) {
+        font-size: 75%;
+        position:relative;
+        bottom:0.5rem;
+    }
+    @include breakpoint(medium) {
+        font-size: 50%;
+        position: relative;
+        bottom: 0.5rem;
+    }
+    @include breakpoint(small) {
+        font-size: 100%;
+    }
+}
+
+//TOS links
+.tos h3 {
+    padding-left:0.5rem;
+    @include breakpoint(large) {
+        font-size:1.7rem;
+    }
+}
+
+@media only screen and (max-width: 75rem) {
+    .tos {
+        margin-left:2rem;
+        margin-right:2rem;
+        text-align:justify;
+    }
+}
