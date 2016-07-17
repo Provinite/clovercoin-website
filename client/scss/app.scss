@@ -41,6 +41,7 @@
 @include foundation-float-classes; // @include foundation-flex-classes;
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
 .top-bar {
     padding: 0;
 }
@@ -161,7 +162,7 @@ $footer-text-color: #fff;
     }
 }
 
-//TOS links
+//TOS
 .tos h3 {
     padding-left:0.5rem;
     @include breakpoint(large) {
@@ -170,9 +171,60 @@ $footer-text-color: #fff;
 }
 
 @media only screen and (max-width: 75rem) {
-    .tos {
+    .tos, .commission-guide, .about-me, .find-me {
         margin-left:2rem;
         margin-right:2rem;
         text-align:justify;
     }
+}
+
+.commission-guide a.accordion-title h3 {
+    @include breakpoint(medium) {
+        font-size:1.3rem;
+    }
+}
+//Price Grid
+.row.price-grid {
+    .column {
+        background-color:$light-gray;
+        background-clip:content-box;
+        div {
+            border:1px solid $dark-gray;
+        }
+    }
+    h3 {
+        text-align:center;
+        background-color:$primary-color;
+        color: #FFF;
+        font-size:1.3rem;
+
+    }
+    .line-item {
+        display:block;
+        padding-left:1rem;
+        .line-item-price {
+            display: block;
+            float:right;
+            padding-right:1rem;
+        }
+    }
+}
+
+.top-bar + :not(.orbit) {
+    margin-top:3rem;
+}
+
+img.paragraph-float-right {
+    margin-left:1rem;
+}
+
+img.thumb-callout {
+    @include thumbnail;
+    &:hover {
+        box-shadow: 0 0 0 1px rgba(10,10,10,0.2);
+    }
+}
+
+img.thumb-callout.float-center {
+    display:block;
 }
