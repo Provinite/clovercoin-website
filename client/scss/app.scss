@@ -92,13 +92,12 @@
 }
 
 .full-spread-menu > div {
-    cursor: pointer;
 
     &:hover icon.icon-splash {
         color:$purple;
     }
     a {
-        text-decoration: none;    
+        text-decoration: none;
     }
 }
 
