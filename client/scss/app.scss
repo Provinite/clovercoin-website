@@ -104,9 +104,10 @@
     }
 }
 
+//fix for flash of unstyled content
 .orbit {
     opacity: 0;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out, height 0.5s ease-out;
 }
 .orbit:not([data-loaded='true']) li:not(:first-child) img {
     position:absolute;
