@@ -95,6 +95,15 @@
     padding: 0.3rem;
 }
 
+h2.like-h4 {
+    @include breakpoint(medium) {
+        font-size:1.5625rem;
+    }
+    @include breakpoint(small) {
+        font-size: 1.125rem;
+    }
+}
+
 .full-spread-menu > div {
     a {
         text-decoration: none;
