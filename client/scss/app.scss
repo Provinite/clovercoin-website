@@ -74,32 +74,45 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
 .logo {
     color: #E8B61D;
 }
+
 .logo.show-for-large img {
     position: absolute;
     left: 0;
     top: 0;
     z-index: 1;
 }
+
 .orbit-container {
     //hackety hack hack
     height: auto !important;
 }
+
 .orbit-caption {
     padding: 0.3rem;
 }
 
 .full-spread-menu > div {
-
-
     a {
         text-decoration: none;
         &:hover icon.icon-splash {
             color:$purple;
         }
     }
+}
+
+.orbit {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+.orbit:not([data-loaded='true']) li:not(:first-child) img {
+    position:absolute;
+}
+.orbit[data-loaded='true'] {
+    opacity: 1;
 }
 
 $footer-text-color: #fff;
