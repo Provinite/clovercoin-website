@@ -77,7 +77,7 @@
 .logo {
     color: #E8B61D;
 }
-.logo img {
+.logo.show-for-large img {
     position: absolute;
     left: 0;
     top: 0;
@@ -139,9 +139,13 @@ $footer-text-color: #fff;
     li {
         margin-top: 0.5em;
     }
+    a {
+        text-decoration: none;
+    }
     a:hover {
         color:$purple;
         vertical-align:middle;
+        text-decoration: none;
     }
 }
 
@@ -210,6 +214,9 @@ $footer-text-color: #fff;
     }
 }
 
+.top-bar .logo a {
+    color: $orange;
+}
 .top-bar + :not(.orbit) {
     margin-top:3rem;
 }
