@@ -35,6 +35,9 @@ var paths = {
         ],
         img: [
             'client/assets/img/**'
+        ],
+        php: [
+            'client/api/**'
         ]
     },
     header: 'client/templates/global-header.html',
@@ -75,6 +78,7 @@ gulp.task('copy', function() {
         .pipe($.headerfooter.header(paths.header))
         .pipe($.headerfooter.footer(paths.footer))
         .pipe(gulp.dest('./build/'));
+    gulp.src(paths.app.php).pipe(gulp.dest('./build/api/'));
 });
 
 gulp.task('server', function() {

@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 css
 build
+client/api/captcha-secret.php
